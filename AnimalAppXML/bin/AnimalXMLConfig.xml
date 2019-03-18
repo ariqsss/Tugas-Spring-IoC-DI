@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+    	http://www.springframework.org/schema/context/spring-context.xsd">
+    	
+    <context:property-placeholder 
+    	location="classpath:animal.properties"/>
+    	
+    <bean id="Cat1"
+    	class="com.ariq.animalapp2.animal.Cat" scope="prototype">
+  		
+    	<property name="spesies" value="${Cat1.spesies}"></property>
+    	<property name="name" value="${Cat1.name}"></property>
+    	<property name="race" value="${Cat1.race}"></property>
+    	<property name="age" value="${Cat1.age}"></property>
+    	<property name="health" value="${Cat1.health}"></property>    
+    	<property name="color" value="${Cat1.color}"></property>  	
+    </bean>
+    
+    <bean id="Dog1"
+    	class="com.ariq.animalapp2.animal.Cat" scope="prototype">
+  		
+    	<property name="spesies" value="${Dog1.spesies}"></property>
+    	<property name="name" value="${Dog1.name}"></property>
+    	<property name="race" value="${Dog1.race}"></property>
+    	<property name="age" value="${Dog1.age}"></property>
+    	<property name="health" value="${Dog1.health}"></property>    
+    	<property name="color" value="${Dog1.color}"></property>  	
+    </bean>
+</beans>
